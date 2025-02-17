@@ -1,0 +1,21 @@
+Check Contract
+
+cargo stylus check
+
+Deploy Contract
+
+cargo stylus deploy --endpoint http://localhost:8547 --private-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --estimate-gas 
+
+Call Contract 
+
+cast call --rpc-url http://localhost:8547 --private-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 [deployed-contract-address] "number()(uint256)"
+
+Mutate Contract 
+
+cast send --rpc-url http://localhost:8547 --private-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 [deployed-contract-address] "increment()"
+
+interface IData {
+    function userMain(uint8[] memory _input) external pure returns (uint8[] memory);
+}
+
+0xa6e41ffd769491a42a6e5ce453259b93983a22ef
